@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de biografia de Erick. Conheça mais sobre a história e formação de Erick.">
+    <title>Biografia de Erick</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos gerais */
+        body {
+            background-color: #2c2c2c;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 8vh; /* Adiciona espaço para a barra de navegação */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navegação */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(36, 36, 36, 0.8);
+            height: 8vh;
+            border-bottom: 1px solid #333333;
+        }
+
+        #mylogo {
+            font-size: 24px;
+            color: #e0e0e0;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-left: 32px;
+        }
+
+        .nav-list li a {
+            color: #ff5733;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav-list li a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff5733;
+            bottom: 0;
+            left: 0;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .nav-list li a:hover::after {
+            width: 100%;
+        }
+
+        /* Seção de Conteúdo */
+        .first-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 140px;
+            height: 80vh;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .textopage1 {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .header-image {
+            width: 400px;
+            border-radius: 50%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        section {
+            padding: 4rem;
+        }
+
+        .first-section > div h1 {
+            font-size: 4rem;
+            color: #e0e0e0;
+            margin-bottom: 2px;
+        }
+
+        .first-section > div p {
+            font-size: 1rem;
+            color: #e0e0e0;
+        }
+
+        /* Sobre Mim e Metas */
+        .second-section, .fourth-section {
+            background-color: #333333;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            min-height: 400px;
+        }
+
+        .second-section > div, .fourth-section > div {
+            display: flex;
+            gap: 4rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .second-section > div img, .fourth-section > div img {
+            width: 300px;
+            border-radius: 20%;
+        }
+
+        .title {
+            color: #ff6f00;
+        }
+
+        .second-section > div p, .fourth-section > div p {
+            max-width: 600px;
+            color: #b3b3b3;
+        }
+
+        /* Rodapé */
+        footer {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-color: #242424;
+            border-top: 1px solid #333333;
+        }
+
+        footer > div {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Estilos para telas pequenas */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .nav-list li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .first-section {
+                flex-direction: column;
+                gap: 50px;
+                padding: 20px;
+            }
+
+            .header-image {
+                width: 80%;
+                max-width: 400px;
+            }
+
+            .second-section > div, .fourth-section > div {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .second-section > div img, .fourth-section > div img {
+                width: 80%;
+                max-width: 300px;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Estilos para telas muito pequenas */
+        @media (max-width: 480px) {
+            .first-section > div h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-list li a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="menu-desktop">
+            <div id="mylogo">Erick Junio</div>
+
+            <ul class="nav-list">
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#experiencias">Experiencias</a></li>
+                <li><a href="#meta">Metas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="first-section">
+                <div class="textopage1">
+                    <h1>Olá! Me chamo <strong>Erick Junio</strong></h1>
+                    <p>Tenho 16 anos, sou um jovem entusiasta da tecnologia atualmente cursando
+                        <strong>Desenvolvimento de Sistemas.</strong>
+                    </p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyLtIt8OHE80xZeM1O08Jw2a6SU10OTn4Nsw&s" alt="Descrição da imagem" class="header-image">
+            </section>
+        </div>
+
+        <section id="sobre-mim" class="second-section">
+            <h2 class="title">Sobre mim</h2>
+            <div>
+                <img class="sobre-mim" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyLtIt8OHE80xZeM1O08Jw2a6SU10OTn4Nsw&s" alt="minha foto">
+                <p>Olá, como dito anteriormente, meu nome é Erick. É um prazer conhecê-lo. Sou um jovem de 16 anos que
+                    está se aprofundando cada vez mais no campo do Desenvolvimento de Sistemas. Estou constantemente me
+                    empenhando para evoluir e me tornar um profissional altamente qualificado nesta área.</p>
+            </div>
+        </section>
+
+        <section id="experiencias" class="third-section">
+            <h2 class="title">Experiencias</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PYTHON</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+        </section>
+
+        <section id="meta" class="fourth-section">
+            <h2 class="title">Meta</h2>
+            <div>
+                <img class="sobre-mim" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyLtIt8OHE80xZeM1O08Jw2a6SU10OTn4Nsw&s" alt="minha foto">
+                <p>Como estudante de Desenvolvimento de Sistemas, minha meta é alcançar uma carreira profissional de
+                    excelência e liderança no setor. Tenho como objetivo adquirir conhecimentos técnicos e experiências
+                    práticas que me permitam contribuir de maneira significativa para projetos inovadores.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2 id="contato" class="title">Contato</h2>
+        <div>
+            <a href="#" title="instagram" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 4.42 3.58 8 8 8s8-3.58 8-8c0-4.42-3.58-8-8-8zm0 1.5c1.41 0 2.5.14 3.5.43.33.09.61.26.86.51.25.25.42.53.51.86.29 1 .43 2.09.43 3.5s-.14 2.5-.43 3.5c-.09.33-.26.61-.51.86-.25.25-.53.42-.86.51-1 .29-2.09.43-3.5.43-1.41 0-2.5-.14-3.5-.43a2.63 2.63 0 0 1-.86-.51 2.63 2.63 0 0 1-.51-.86C1.14 10.5 1 9.41 1 8s.14-2.5.43-3.5c.09-.33.26-.61.51-.86A2.63 2.63 0 0 1 4.5 1.5c1-.29 2.09-.43 3.5-.43zM8 3a5 5 0 1 0 0 10A5 5 0 0 0 8 3zm0 1.5a3.5 3.5 0 1 1 0 7A3.5 3.5 0 0 1 8 4.5z" />
+                </svg>
+            </a>
+            <a href="#" title="linkedin" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.5 0a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-3 0v-13A1.5 1.5 0 0 1 1.5 0zm4 0a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-3 0v-13A1.5 1.5 0 0 1 5.5 0zm4 0a1.5 1.5 0 0 1 1.5 1.5v13a1.5 1.5 0 0 1-3 0v-13A1.5 1.5 0 0 1 9.5 0z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
